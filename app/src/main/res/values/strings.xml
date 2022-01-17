@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">CallMeVideoApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -12,9 +12,9 @@
     <string name="iv_adapter_fragment_avatar_dialog_avatars_avatar_contentDescription">Avatar</string>
     <string name="sv_fragment_user_list_search_hint">Chit chat with someone</string>
     <string name="iv_fragment_alert_dialog_icon_content_description">Coffee icon</string>
-    <string name="tv_fragment_user_list_empty_title_text">Looks like no one is online...</string>
+    <string name="tv_fragment_user_list_empty_title_text">Looks like no one is online…</string>
     <string name="iv_fragment_user_list_empty_icon">Sad girl</string>
-    <string name="tv_fragment_call_dialog_title_text">Wanna talk with</string>
+    <string name="tv_fragment_call_dialog_title_text" tools:ignore="Typos">Wanna talk with</string>
     <string name="iv_fragment_call_dialog_icon_contentDescription">User icon</string>
     <string name="btn_fragment_call_dialog_call_text">Call</string>
     <string name="btn_fragment_call_dialog_cancel_text">Cancel</string>
@@ -22,4 +22,5 @@
     <string name="iv_fragment_connect_dialog_icon_contentDescription">Avatar icon</string>
     <string name="btn_fragment_connect_dialog_accept_contentDescription">Accept call icon</string>
     <string name="btn_fragment_connect_dialog_decline_contentDescription">Decline call icon</string>
+    <string name="btn_btn_fragment_video_call_mic_contentDescription">Microphone button</string>
 </resources>
