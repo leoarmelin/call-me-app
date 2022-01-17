@@ -1,7 +1,6 @@
 package com.example.callmevideoapp.adapter
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -15,7 +14,7 @@ import com.example.callmevideoapp.utils.UIHandler
 
 class AvatarAdapter(
   private val itemClickListener: OnItemClickListener
-) : RecyclerView.Adapter<AvatarAdapter.ViewHolder>(){
+) : RecyclerView.Adapter<AvatarAdapter.ViewHolder>() {
 
   private var avatarList = mutableListOf<Avatar>()
 
@@ -23,30 +22,30 @@ class AvatarAdapter(
     fun handleAvatarClick(avatarName: String)
   }
 
-  inner class ViewHolder(binding: AdapterFragmentAvatarDialogAvatarsBinding):
+  inner class ViewHolder(binding: AdapterFragmentAvatarDialogAvatarsBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
     // Create UI constants
-      private val avatar: ImageView = binding.ivAdapterFragmentAvatarDialogAvatarsAvatar
-      private val avatarContainer: CardView = binding.cvAdapterFragmentAvatarDialogAvatarsContainer
+    private val avatar: ImageView = binding.ivAdapterFragmentAvatarDialogAvatarsAvatar
+    private val avatarContainer: CardView = binding.cvAdapterFragmentAvatarDialogAvatarsContainer
 
-      fun bind(currentAvatar: Avatar) {
-        // Apply data into UI
-        avatar.setImageResource(AvatarHandler.getAvatarByName(currentAvatar.avatarName))
+    fun bind(currentAvatar: Avatar) {
+      // Apply data into UI
+      avatar.setImageResource(AvatarHandler.getAvatarByName(currentAvatar.avatarName))
 
-        if (currentAvatar.isPicked) {
-          UIHandler.updateCardBackgroundColor(avatarContainer, R.color.primary)
-        } else {
-          UIHandler.updateCardBackgroundColor(avatarContainer, R.color.transparent)
-        }
-
-        // Add listeners
-        avatarContainer.setOnClickListener {
-          itemClickListener.handleAvatarClick(currentAvatar.avatarName)
-        }
+      if (currentAvatar.isPicked) {
+        UIHandler.updateCardBackgroundColor(avatarContainer, R.color.primary)
+      } else {
+        UIHandler.updateCardBackgroundColor(avatarContainer, R.color.transparent)
       }
 
+      // Set listeners
+      avatarContainer.setOnClickListener {
+        itemClickListener.handleAvatarClick(currentAvatar.avatarName)
+      }
     }
+
+  }
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
     val layoutInflater = LayoutInflater.from(parent.context)

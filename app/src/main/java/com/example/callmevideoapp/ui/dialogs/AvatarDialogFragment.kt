@@ -52,7 +52,7 @@ class AvatarDialogFragment(
     val confirmBtn: Button = binding.btnFragmentAvatarDialogConfirm
 
 
-    // Add listeners
+    // Set listeners
     confirmBtn.setOnClickListener {
       dialogListener.onAvatarDialogConfirmClick(this)
     }
@@ -86,5 +86,4 @@ class AvatarDialogFragment(
   override fun handleAvatarClick(avatarName: String) {
     authViewModel.selectedAvatarOnDialogLiveData.postValue(avatarName)
   }
-
 }

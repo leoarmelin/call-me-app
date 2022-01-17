@@ -57,6 +57,7 @@ class AlertDialogFragment(
 
     icon.setImageResource(dialogUIData.iconId)
 
+    // Set listeners
     confirmBtn.setOnClickListener {
       dialogListener.onAlertDialogConfirmClick(this)
     }

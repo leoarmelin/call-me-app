@@ -54,7 +54,7 @@ class UserListAdapter(
         }
       )
 
-      // Apply listeners
+      // Set listeners
       itemContainer.setOnClickListener {
         itemClickListener.handleUserClick(currentUser)
       }
