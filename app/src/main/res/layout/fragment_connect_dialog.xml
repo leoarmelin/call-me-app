@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background95"
+    tools:context=".ui.dialogs.ConnectDialogFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_fragment_connect_dialog_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Aaamandinha" />
+
+        <TextView
+            android:id="@+id/tv_fragment_connect_dialog_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="@string/tv_fragment_connect_dialog_message_text"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_fragment_connect_dialog_username" />
+
+        <ImageView
+            android:id="@+id/iv_fragment_connect_dialog_icon"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/iv_fragment_connect_dialog_icon_contentDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fragment_connect_dialog_message"
+            tools:src="@raw/meditating" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_fragment_connect_dialog_icon">
+
+            <ImageButton
+                android:id="@+id/btn_fragment_connect_dialog_accept"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/background_btn_fragment_connect_dialog_accept"
+                android:contentDescription="@string/btn_fragment_connect_dialog_accept_contentDescription"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add_to_call"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_fragment_connect_dialog_decline"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/background_btn_fragment_connect_dialog_decline"
+                android:contentDescription="@string/btn_fragment_connect_dialog_decline_contentDescription"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_hang_up"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

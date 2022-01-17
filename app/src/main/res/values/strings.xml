@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CallMeVideoApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_auth_title">Choose your name and icon</string>
+    <string name="fragment_auth_avatar_description">Avatar</string>
+    <string name="fragment_auth_edit_description">Edit avatar icon</string>
+    <string name="et_fragment_auth_name_hint">Choose your name</string>
+    <string name="fragment_auth_send_text">ENTER</string>
+    <string name="tv_fragment_avatar_dialog_title_text">AVATAR</string>
+    <string name="btn_fragment_avatar_dialog_confirm_text">Confirm</string>
+    <string name="iv_adapter_fragment_avatar_dialog_avatars_avatar_contentDescription">Avatar</string>
+    <string name="sv_fragment_user_list_search_hint">Chit chat with someone</string>
+    <string name="iv_fragment_alert_dialog_icon_content_description">Coffee icon</string>
+    <string name="tv_fragment_user_list_empty_title_text">Looks like no one is online...</string>
+    <string name="iv_fragment_user_list_empty_icon">Sad girl</string>
+    <string name="tv_fragment_call_dialog_title_text">Wanna talk with</string>
+    <string name="iv_fragment_call_dialog_icon_contentDescription">User icon</string>
+    <string name="btn_fragment_call_dialog_call_text">Call</string>
+    <string name="btn_fragment_call_dialog_cancel_text">Cancel</string>
+    <string name="tv_fragment_connect_dialog_message_text">Wants to connect with you</string>
+    <string name="iv_fragment_connect_dialog_icon_contentDescription">Avatar icon</string>
+    <string name="btn_fragment_connect_dialog_accept_contentDescription">Accept call icon</string>
+    <string name="btn_fragment_connect_dialog_decline_contentDescription">Decline call icon</string>
+</resources>

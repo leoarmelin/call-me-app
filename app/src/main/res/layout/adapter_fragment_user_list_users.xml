@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_adapter_fragment_user_list_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_adapter_fragment_user_list_users_avatar_container"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_adapter_fragment_user_list_users_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/fragment_auth_avatar_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@raw/meditating" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iv_adapter_fragment_user_list_users_activity_container"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:backgroundTint="@color/textMinusOne"
+            android:elevation="10dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_adapter_fragment_user_list_users_activity_value"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="20dp" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_adapter_fragment_user_list_users_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16sp"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textColor="@color/textMinusOne"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cl_adapter_fragment_user_list_users_avatar_container"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Jefferson Duarte" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_cl_fragment_avatar_dialog"
+    android:minWidth="300dp"
+    android:paddingVertical="8dp"
+    tools:context=".ui.dialogs.AvatarDialogFragment">
+
+    <TextView
+        android:id="@+id/tv_fragment_avatar_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:text="@string/tv_fragment_avatar_dialog_title_text"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_fragment_avatar_dialog_avatars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/background_rv_fragment_avatar_dialog_avatars"
+        android:minWidth="268dp"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fragment_avatar_dialog_title"
+        app:spanCount="3"
+        tools:itemCount="4"
+        tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/adapter_fragment_avatar_dialog_avatars" />
+
+    <Button
+        android:id="@+id/btn_fragment_avatar_dialog_confirm"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_btn_fragment_avatar_dialog_confirm"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:text="@string/btn_fragment_avatar_dialog_confirm_text"
+        android:textColor="@color/textMinusOne"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_fragment_avatar_dialog_avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

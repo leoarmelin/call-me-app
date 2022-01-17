@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_cl_fragment_alert_dialog"
+    android:minWidth="300dp"
+    android:padding="16dp"
+    tools:context=".ui.dialogs.AlertDialogFragment">
+
+    <TextView
+        android:id="@+id/tv_fragment_alert_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:textAlignment="center"
+        android:textColor="@color/textMinusOne"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Oops" />
+
+    <ImageView
+        android:id="@+id/iv_fragment_alert_dialog_icon"
+        android:layout_width="300dp"
+        android:layout_height="240dp"
+        android:contentDescription="@string/iv_fragment_alert_dialog_icon_content_description"
+        android:src="@raw/coffee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fragment_alert_dialog_title" />
+
+    <TextView
+        android:id="@+id/tv_fragment_alert_dialog_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textAlignment="center"
+        android:textColor="@color/textMinusOne"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_fragment_alert_dialog_icon"
+        tools:text="It looks like your name is wrong." />
+
+    <Button
+        android:id="@+id/btn_fragment_alert_dialog_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_btn_fragment_auth_send"
+        android:minWidth="120dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fragment_alert_dialog_description"
+        tools:text="I understand" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

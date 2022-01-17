@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_cl_fragment_alert_dialog"
+    android:padding="24dp"
+    tools:context=".ui.dialogs.CallDialogFragment">
+
+    <TextView
+        android:id="@+id/tv_fragment_call_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:text="@string/tv_fragment_call_dialog_title_text"
+        android:textAlignment="center"
+        android:textColor="@color/textMinusOne"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_fragment_call_dialog_icon"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/iv_fragment_call_dialog_icon_contentDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fragment_call_dialog_title"
+        tools:src="@raw/meditating" />
+
+    <TextView
+        android:id="@+id/tv_fragment_call_dialog_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:textAlignment="center"
+        android:textColor="@color/textMinusOne"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_fragment_call_dialog_icon"
+        tools:text="Aaamandinha" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fragment_call_dialog_username">
+
+        <Button
+            android:id="@+id/btn_fragment_call_dialog_call"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/background_btn_fragment_auth_send"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:text="@string/btn_fragment_call_dialog_call_text"
+            android:textColor="@color/textMinusOne"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_fragment_call_dialog_cancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/background_btn_fragment_call_dialog_cancel"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="@string/btn_fragment_call_dialog_cancel_text"
+            android:textColor="@color/primary"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
