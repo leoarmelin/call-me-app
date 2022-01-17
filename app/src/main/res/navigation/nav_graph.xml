@@ -16,15 +16,53 @@
         <action
             android:id="@+id/action_authFragment_to_userListFragment"
             app:destination="@id/userListFragment" />
+        <action
+            android:id="@+id/action_authFragment_to_alertDialogFragment"
+            app:destination="@id/alertDialogFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/avatarDialogFragment"
-        android:name="com.example.callmevideoapp.ui.dialogs.AvatarDialogFragment"
-        android:label="fragment_avatar_dialog"
-        tools:layout="@layout/fragment_avatar_dialog" />
     <fragment
         android:id="@+id/userListFragment"
         android:name="com.example.callmevideoapp.ui.fragments.UserListFragment"
         android:label="fragment_user_list"
-        tools:layout="@layout/fragment_user_list" />
+        tools:layout="@layout/fragment_user_list" >
+        <action
+            android:id="@+id/action_userListFragment_to_alertDialogFragment"
+            app:destination="@id/alertDialogFragment" />
+        <action
+            android:id="@+id/action_userListFragment_to_callDialogFragment"
+            app:destination="@id/callDialogFragment" />
+        <action
+            android:id="@+id/action_userListFragment_to_connectDialogFragment"
+            app:destination="@id/connectDialogFragment" />
+        <action
+            android:id="@+id/action_userListFragment_to_videoCallFragment"
+            app:destination="@id/videoCallFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/avatarDialogFragment"
+        android:name="com.example.callmevideoapp.ui.dialogs.AvatarDialogFragment"
+        android:label="fragment_avatar_dialog"
+        tools:layout="@layout/fragment_avatar_dialog" />
+    <dialog
+        android:id="@+id/alertDialogFragment"
+        android:name="com.example.callmevideoapp.ui.dialogs.AlertDialogFragment"
+        android:label="fragment_alert_dialog"
+        tools:layout="@layout/fragment_alert_dialog" />
+    <dialog
+        android:id="@+id/callDialogFragment"
+        android:name="com.example.callmevideoapp.ui.dialogs.CallDialogFragment"
+        android:label="fragment_call_dialog"
+        tools:layout="@layout/fragment_call_dialog" />
+    <dialog
+        android:id="@+id/connectDialogFragment"
+        android:name="com.example.callmevideoapp.ui.dialogs.ConnectDialogFragment"
+        android:label="fragment_connect_dialog"
+        tools:layout="@layout/fragment_connect_dialog" />
+    <fragment
+        android:id="@+id/videoCallFragment"
+        android:name="com.example.callmevideoapp.ui.fragments.VideoCallFragment"
+        android:label="fragment_video_call"
+        tools:layout="@layout/fragment_video_call" />
+
 </navigation>

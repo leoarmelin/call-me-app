@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.callmevideoapp.R
@@ -194,6 +195,8 @@ class UserListFragment :
 
   override fun onConnectDialogAnswer(dialog: ConnectDialogFragment) {
     dialog.dismiss()
+
+    findNavController().navigate(R.id.action_userListFragment_to_videoCallFragment)
   }
 
   override fun onConnectDialogDecline(dialog: ConnectDialogFragment) {
