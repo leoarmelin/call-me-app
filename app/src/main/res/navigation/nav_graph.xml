@@ -63,6 +63,21 @@
         android:id="@+id/videoCallFragment"
         android:name="com.example.callmevideoapp.ui.fragments.VideoCallFragment"
         android:label="fragment_video_call"
-        tools:layout="@layout/fragment_video_call" />
+        tools:layout="@layout/fragment_video_call" >
+        <action
+            android:id="@+id/action_videoCallFragment_to_endedCallFragment"
+            app:destination="@id/endedCallFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endedCallFragment"
+        android:name="com.example.callmevideoapp.ui.fragments.EndedCallFragment"
+        android:label="fragment_ended_call"
+        tools:layout="@layout/fragment_ended_call" >
+        <action
+            android:id="@+id/action_endedCallFragment_to_userListFragment"
+            app:popUpTo="@id/userListFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/userListFragment" />
+    </fragment>
 
 </navigation>

@@ -23,4 +23,7 @@
     <string name="btn_fragment_connect_dialog_accept_contentDescription">Accept call icon</string>
     <string name="btn_fragment_connect_dialog_decline_contentDescription">Decline call icon</string>
     <string name="btn_btn_fragment_video_call_mic_contentDescription">Microphone button</string>
+    <string name="tv_fragment_ended_call_title_text">Your call ended</string>
+    <string name="iv_fragment_ended_call_icon_contentDescription">Strange girl icon</string>
+    <string name="btn_fragment_ended_call_back_text">Back to menu</string>
 </resources>

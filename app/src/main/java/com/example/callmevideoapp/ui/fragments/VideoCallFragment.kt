@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.callmevideoapp.R
 import com.example.callmevideoapp.databinding.FragmentVideoCallBinding
 import com.example.callmevideoapp.utils.UIHandler
@@ -81,7 +82,6 @@ class VideoCallFragment : Fragment() {
     }
 
     hangUpBtn.setOnTouchListener { _, event ->
-
       when (event.action) {
         MotionEvent.ACTION_DOWN -> {
           hangUpBtn.alpha = 0.7f
@@ -89,6 +89,9 @@ class VideoCallFragment : Fragment() {
 
         MotionEvent.ACTION_UP -> {
           hangUpBtn.alpha = 1f
+
+          // Add logic to exit room
+          findNavController().navigate(R.id.action_videoCallFragment_to_endedCallFragment)
         }
       }
 
