@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.fragments.VideoCallFragment">
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <VideoView
+        android:layout_width="90dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_fragment_video_call_mic"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/background_btn_fragment_video_call_mic"
+        android:contentDescription="@string/btn_btn_fragment_video_call_mic_contentDescription"
+        android:src="@drawable/ic_mic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_fragment_video_call_cam"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/background_btn_fragment_video_call_mic"
+        android:contentDescription="@string/btn_btn_fragment_video_call_mic_contentDescription"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintBottom_toTopOf="@+id/btn_fragment_video_call_mic"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_fragment_video_call_hangup"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/background_btn_fragment_video_call_hangup"
+        android:contentDescription="@string/btn_btn_fragment_video_call_mic_contentDescription"
+        android:src="@drawable/ic_hang_up"
+        app:layout_constraintBottom_toTopOf="@+id/btn_fragment_video_call_cam"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
